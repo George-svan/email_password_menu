@@ -1,0 +1,288 @@
+@import url('reset.css');
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../fonts/subset-Roboto-Regular.woff2') format('woff2'),
+        url('../fonts/subset-Roboto-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.color-fff {
+	color: #fff;
+}
+
+.color-hover:hover {
+	color: #fff;
+}
+
+.size-text {
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.main {
+	background: url('../assets/images/bg.png') center / cover ;
+	height: 100%;
+	display: flex;
+	justify-content: flex-end;
+}
+
+.main a {
+	text-decoration: none;
+	color: #153416;
+}
+
+.registration {
+	background: rgba(233, 233, 233, 0.25);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter: blur(5px);
+	flex: 0 1 496px;
+	text-align: center;
+}
+
+/* switch */
+.checkbox-switch {
+	display: inline-block;
+	position: relative;
+	margin-top: 60px;
+	margin-bottom: 80px;
+	cursor: pointer;
+}
+
+.checkbox-switch input {
+	display: none;
+}
+
+.checkbox-switch input + label {
+	display: inline-block;
+	width: 340px;
+	height: 36px;
+	border: 1px solid #153416;
+	border-radius: 30px;
+	position: relative;
+	cursor: pointer;
+}
+
+.checkbox-switch input + label::before {
+	content: '';
+	position: absolute;
+	left: 1px;
+	top: 1px;
+	width: 168px;
+	height: 32px;
+	background: #153416;
+	border-radius: 30px;
+	transition: .7s ease;
+}
+
+.checkbox-switch input:checked + label::before {
+	left: calc(100% - 1px);
+	transform: translateX(-100%);
+}
+
+.checkbox-switch span {
+	position: absolute;
+	top: 11px;
+	left: 73px;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 14px;
+}
+
+.checkbox-switch span + span {
+	left: auto;
+	right: 50px;
+}
+
+h1 {
+	margin-bottom: 29px;
+	text-align: center;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 35px;
+}
+
+/* email & password */
+.email {
+	margin-bottom: 15px;
+}
+
+.email input {
+	background: #929191;
+	border-radius: 30px;
+	width: 340px;
+	height: 44px;
+	border: none;
+	padding: 15px 20px;
+	color: #fff;
+}
+
+.email input:focus  {
+	border: 1px solid #153416;
+}
+
+.email input::placeholder {
+	color: #fff;
+}
+
+.password {
+	margin-bottom: 21px;
+}
+
+.password input {
+	background: #929191;
+	border-radius: 30px;
+	width: 340px;
+	height: 44px;
+	border: none;
+	padding: 15px 20px;
+	color: #fff;
+}
+
+.password input::placeholder {
+	color: #fff;
+}
+
+/* tick */
+.checkbox-tick {
+	margin: 0 78px;
+	margin-bottom: 30px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.checkbox-tick input {
+	display: none;
+}
+
+.checkbox-tick input + label {
+	padding: 6px 5px 5px 25px;
+	display: inline-block;
+	position: relative;
+	cursor: pointer;
+	font-weight: 400;
+	line-height: 14px;
+	font-size: 12px;
+}
+
+.checkbox-tick input + label::before {
+	content: '';
+	position: absolute;
+	top: 5px;
+	left: 0;
+	width: 15px;
+	height: 15px;
+	border: 1px solid #D9D9D9;
+	border-radius: 2px;
+	transition: .3s linear;
+	padding: 3px;
+}
+
+.checkbox-tick input:checked + label::before {
+	background: #153416;
+	border: none
+}
+
+.checkbox-tick input:checked + label::after {
+	content: '';
+	position: absolute;
+	top: 6.5px;
+	left: 2px;
+	width: 11px;
+	height: 11px;
+	background: url('../assets/icons/tick.svg');
+}
+
+/* forgot? */
+.forgot a {
+	text-decoration-line: underline;
+}
+
+/* button */
+.button {
+	display: inline-block;
+	margin-bottom: 40px;
+}
+
+.button button {
+	width: 340px;
+	height: 44px;
+	background: #153416;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+}
+
+.button:hover button {
+	animation: button-translate .8s linear infinite;
+}
+
+@keyframes button-translate {
+	10% {
+		transform: translateX(2px) rotate(1deg);
+	}
+	20% {
+		transform: translateX(-1px) rotate(1deg);
+	}
+	40% {
+		transform: translateX(2px) rotate(-1deg);
+	}
+	70% {
+		transform: translateX(2px) rotate(0deg);
+	}
+}
+/* footer */
+.account {
+	margin-bottom: 30px;
+}
+
+.account a:hover {
+	color: #fff;
+}
+
+.account a:first-child {
+	padding-right: 15px;
+}
+
+.account a:last-child {
+	text-decoration-line: underline;
+}
+
+.or-login {
+	margin-bottom: 20px;
+}
+
+/* icons */
+.icons {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 20px;
+	font-size: 0;
+}
+
+.icons a {
+	display: inline-block;
+	font-size: 16px;
+}
+
+.icons a:hover .icons-footer {
+	fill: #fff;
+	transform: rotateX(-1turn) rotateY(-1turn) rotateZ(-1turn);
+}
+
+.icons-footer {
+	width: 24px;
+	height: 24px;
+	fill: #153416;
+	transition: all .5s ease;
+}
+
