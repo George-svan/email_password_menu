@@ -32,9 +32,11 @@ body {
 	height: 100%;
 	display: flex;
 	justify-content: flex-end;
+	overflow: hidden;
 }
 
-.main a {
+.main a,
+.main p {
 	text-decoration: none;
 	color: #153416;
 }
@@ -45,6 +47,7 @@ body {
 	-webkit-backdrop-filter: blur(5px);
 	flex: 0 1 496px;
 	text-align: center;
+	overflow: auto;
 }
 
 /* switch */
@@ -61,7 +64,8 @@ body {
 }
 
 .checkbox-switch input + label {
-	display: inline-block;
+	display: flex;
+	align-items: center;
 	width: 340px;
 	height: 36px;
 	border: 1px solid #153416;
@@ -80,6 +84,7 @@ body {
 	background: #153416;
 	border-radius: 30px;
 	transition: .7s ease;
+	z-index: -1;
 }
 
 .checkbox-switch input:checked + label::before {
@@ -88,17 +93,10 @@ body {
 }
 
 .checkbox-switch span {
-	position: absolute;
-	top: 11px;
-	left: 73px;
+	flex: 1 1 50%;
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 14px;
-}
-
-.checkbox-switch span + span {
-	left: auto;
-	right: 50px;
 }
 
 h1 {
@@ -124,8 +122,9 @@ h1 {
 	color: #fff;
 }
 
-.email input:focus  {
-	border: 1px solid #153416;
+.email input:focus,
+.password input:focus {
+	outline: 2px solid #153416 ;
 }
 
 .email input::placeholder {
@@ -212,16 +211,17 @@ h1 {
 	margin-bottom: 40px;
 }
 
-.button button {
+.button input {
 	width: 340px;
 	height: 44px;
 	background: #153416;
 	border-radius: 30px;
 	border: none;
 	cursor: pointer;
+	color: #fff;
 }
 
-.button:hover button {
+.button:hover input {
 	animation: button-translate .8s linear infinite;
 }
 
@@ -244,11 +244,8 @@ h1 {
 	margin-bottom: 30px;
 }
 
-.account a:hover {
-	color: #fff;
-}
-
-.account a:first-child {
+.account p {
+	display: inline-block;
 	padding-right: 15px;
 }
 
@@ -258,6 +255,7 @@ h1 {
 
 .or-login {
 	margin-bottom: 20px;
+	color: #153416;
 }
 
 /* icons */
